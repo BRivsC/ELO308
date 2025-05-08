@@ -6,13 +6,13 @@ Repositorio con los scripts de la memoria "Desarrollo de un sistema de sensores 
 ### Descripción de Carpetas
 
 - **Codigo/Arduino/**: Contiene los sketches de Arduino para la adquisición de señales EMG.
-  - `BioAmp EMGFilter/`: Código para filtrar señales EMG utilizando BioAmp EXG Pill. Utilizado principalmente como ejemplo
-  - `EnvolventeEMG/`: Código para calcular la envolvente de señales EMG usando los sensores Gravity Analog EMG.
+  - `BioAmp EMGFilter/`: Código para filtrar señales EMG utilizando un BioAmp EXG Pill. Utilizado principalmente como ejemplo
+  - `EnvolventeEMG/`: Código para calcular la envolvente de señales EMG directamente desde el microcontrolador.
   - `Retornar_3_CH_ADC_wOnset/`: Código para capturar señales de 3 canales con detección de onset.
 
 - **Codigo/Demo/**: Incluye un video demostrativo y un script para detectar gestos en tiempo real.
 
-- **Codigo/Python/**: Scripts en Python para procesamiento y análisis de señales EMG.
+- **Codigo/Python/**: Scripts en Python para procesamiento y análisis offline de señales EMG.
   - `consultar_gestos.py`: Consulta los gestos registrados en la base de datos.
   - `emg_cvm_norm_sql.py`: Normaliza señales EMG respecto a la contracción voluntaria máxima (CVM).
   - `fft_datos_3ch.py`: Calcula y grafica la FFT de señales EMG.
@@ -25,6 +25,8 @@ Repositorio con los scripts de la memoria "Desarrollo de un sistema de sensores 
 - **Diagramas/**: Diagramas y esquemas relacionados con el hardware utilizado en el proyecto.
 
 - **Escrito/**: Documento PDF con el escrito asociado al proyecto
+
+- **Modelos 3D/**: Archivos `.stl` con modelos 3D de los sensores y carcasas para portarlas.
 
 ## Requisitos
 
@@ -46,7 +48,9 @@ Repositorio con los scripts de la memoria "Desarrollo de un sistema de sensores 
 
 1. **Adquisición de Datos**:
    - Cargar el sketch `Retornar_3_CH_ADC_wOnset` en el microcontrolador
-   - Conectar los sensores y capturar señales EMG.
+   - Conectar los sensores.
+   - Escribir el nombre del gesto a ejecutar.
+   - Mantener pulsado el botón mientras se ejecuta el gesto.
 
 2. **Procesamiento**:
    - Utilizar el script `emg_cvm_norm_sql.py` para normalizar los datos
@@ -58,4 +62,5 @@ Repositorio con los scripts de la memoria "Desarrollo de un sistema de sensores 
 ## Autor
 
 **Bastián Rivas**  
-Universidad Técnica Federico Santa María  
+Ing. Civil Electrónica  
+Universidad Técnica Federico Santa María, 2025
